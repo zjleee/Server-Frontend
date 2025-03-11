@@ -6,7 +6,11 @@ const app = express();
 
 // Updated CORS configuration
 app.use(cors({
-  origin: ['https://server-frontend-z1a7-89312hz4x-zjleees-projects.vercel.app'],
+  origin: [
+    'https://server-frontend-z1a7.vercel.app',
+    'https://server-frontend-z1a7-89312hz4x-zjleees-projects.vercel.app',
+    'http://localhost:3000' // for local development
+  ],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
