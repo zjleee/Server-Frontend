@@ -1,8 +1,9 @@
-export const API_CONFIG = {
-  BASE_URL: 'http://192.168.240.253:5000', // Your backend server URL
-  SOCKET_URL: 'http://192.168.240.253:5000', // Your WebSocket server URL (same as backend in this case)
+const API_CONFIG = {
+  BASE_URL: process.env.REACT_APP_API_URL || 'https://server-frontend-p3v4.vercel.app/',
   API_ENDPOINTS: {
     AUTH: '/api/auth',
     CHAT: '/api/chat'
   }
-}; 
+};
+
+export { API_CONFIG }; 
