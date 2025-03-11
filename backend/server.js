@@ -4,9 +4,9 @@ require('dotenv').config();
 
 const app = express();
 
-// Middleware
+// Updated CORS configuration
 app.use(cors({
-  origin: process.env.FRONTEND_URL,
+  origin: ['https://server-frontend-z1a7-89312hz4x-zjleees-projects.vercel.app'],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
